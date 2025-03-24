@@ -1,0 +1,30 @@
+# Week 5: Branching
+# Irene East
+
+# Get the number of years from user
+num_years = int(input("Enter the number of years: "))
+
+# Variables for total rainfall and total months
+total_rainfall = 0
+total_months = 0
+
+# Outer loop for each year
+for year in range(1, num_years + 1):
+    print(f"\nYear {year}:")
+    
+    # Inner loop for each month
+    for month in range(1, 13):
+        rainfall = float(input(f"Enter the rainfall for month {month} (in inches): "))
+        
+        # Sum rainfall and increment months
+        total_rainfall += rainfall
+        total_months += 1 
+
+# Calculate the average rainfall
+average_rainfall = total_rainfall / total_months if total_months > 0 else 0
+
+# Display the results
+print("\nRainfall Data Analysis:")
+print(f"Total months: {total_months}")
+print(f"Total rainfall: {total_rainfall:.2f} inches")
+print(f"Average rainfall per month: {average_rainfall:.2f} inches")
